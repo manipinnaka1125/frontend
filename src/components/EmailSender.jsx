@@ -6,7 +6,7 @@ export default function EmailSender({ summary }) {
 
   const sendEmail = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/send-email", {
+      const res = await axios.post("https://meeting-notes-backend-nt4i.onrender.com/send-email", {
         emails,
         summary,
       });

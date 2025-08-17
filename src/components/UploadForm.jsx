@@ -18,7 +18,7 @@ export default function UploadForm({ setSummary }) {
     formData.append("prompt", prompt);
 
     try {
-      const res = await axios.post("http://localhost:5000/summarize", formData, {
+      const res = await axios.post("https://meeting-notes-backend-nt4i.onrender.com/summarize", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setSummary(res.data.summary);
